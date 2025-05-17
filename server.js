@@ -13,7 +13,6 @@ io.on("connection", (socket) => {
     console.log("A user connected");
 
     socket.on("tap", (data) => {
-        console.log(data)
         io.emit("displayTap", data); // Broadcast event to all connected clients
     });
 
